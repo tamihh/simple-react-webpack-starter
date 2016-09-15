@@ -23,18 +23,25 @@ module.exports = ({
     ],
 
     module: {
-      // preLoaders: [{
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   include: /src/,
-      //   loader: 'standard'
-      // }],
+      preLoaders: [{
+        // test: /\.js$/,
+        // exclude: /node_modules/,
+        // include: /src/,
+        // loader: 'standard'
+
+        test: /\.jsx?$/,
+        loaders: ['eslint'],
+        exclude: /node_modules/,
+        include: path.app
+
+      }],
 
       loaders: [{
           test: /\.js$/,
           exclude: /node_modules/,
           include: /src/,
           loader: 'babel'
-      }]
-    }
+      }
+    ]
+  }
 });
