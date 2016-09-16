@@ -12,5 +12,8 @@
     "ecmaFeatures": {
       "jsx": true
     }
+  },
+  "ecmaFeatures": {
+    "semi": [2, "always"], // require or disallow use of semicolons instead of ASI
   }
 }
